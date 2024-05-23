@@ -15,7 +15,7 @@ datasets:
   - path: /home/hc-mistral-alpaca/data/alpaca_synth_queries_healed.jsonl
     type: sharegpt
     conversation: alpaca
-dataset_prepared_path: last_run_prepared2
+dataset_prepared_path: /home/dataset_prepared
 val_set_size: 0.1
 output_dir: /home/training_model_02
 # hub_model_id: hamel/hc-mistral-alpaca
@@ -45,8 +45,8 @@ wandb_project: llm_finetuning_course_2024_01
 # wandb_entity: matdmiller
 
 gradient_accumulation_steps: 2
-micro_batch_size: 64
-eval_batch_size: 64
+micro_batch_size: 40
+eval_batch_size: 40
 num_epochs: 1
 optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
