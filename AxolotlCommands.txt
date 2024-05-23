@@ -1,0 +1,5 @@
+python -m axolotl.cli.preprocess /home/ftcourse/axolotl_configs/training_0X.yml
+
+accelerate launch -m axolotl.cli.train /home/ftcourse/axolotl_configs/training_0X.yml
+
+accelerate launch -m axolotl.cli.inference /home/ftcourse/axolotl_configs/training_0X.yml --lora_model_dir="/home/training_model_0X" --gradio
