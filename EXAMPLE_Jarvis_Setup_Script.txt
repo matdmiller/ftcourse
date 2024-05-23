@@ -1,0 +1,12 @@
+cd /home/axolotl/ &&
+git pull &&
+pip3 install packaging &&
+pip3 install -e '.[flash-attn,deepspeed]' &&
+pip3 install --upgrade huggingface_hub[hf_transfer] &&
+export HF_HUB_ENABLE_HF_TRANSFER=1 &&
+huggingface-cli login --token {Insert HF Token Here} &&
+wandb login {Insert WANDB Token Here} &&
+git lfs install &&
+cd /home &&
+git clone https://huggingface.co/parlance-labs/hc-mistral-alpaca && 
+git clone https://github.com/parlance-labs/ftcourse.git
